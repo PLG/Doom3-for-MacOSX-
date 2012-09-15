@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2DFD49B5147F592900C51B13 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFD49B4147F592900C51B13 /* Carbon.framework */; };
-		2DFD49B9147F593500C51B13 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFD49B7147F593500C51B13 /* IOKit.framework */; };
-		2DFD49BB147F594000C51B13 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFD49BA147F594000C51B13 /* OpenGL.framework */; };
-		2DFD49BD147F594900C51B13 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFD49BC147F594900C51B13 /* CoreAudio.framework */; };
-		2DFD49BF147F5F1000C51B13 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFD49BE147F5F1000C51B13 /* libcurl.dylib */; };
-		2DFD49C1147F5FDB00C51B13 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFD49C0147F5FDB00C51B13 /* OpenAL.framework */; };
+		136034811604FC0D002E2426 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136034801604FC0D002E2426 /* OpenAL.framework */; };
+		136034831604FC2D002E2426 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 136034821604FC2D002E2426 /* libcurl.dylib */; };
+		136034851604FC45002E2426 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136034841604FC45002E2426 /* CoreAudio.framework */; };
+		136034871604FC54002E2426 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136034861604FC54002E2426 /* OpenGL.framework */; };
+		136034891604FC60002E2426 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136034881604FC60002E2426 /* IOKit.framework */; };
+		1360348B1604FC6C002E2426 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1360348A1604FC6C002E2426 /* Carbon.framework */; };
+		136034971604FE81002E2426 /* libidlib_pic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 136034941604FD23002E2426 /* libidlib_pic.a */; };
 		2DFD49DB147F60B100C51B13 /* game.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81225B8B0912C731005D34B9 /* game.dylib */; };
 		2DFD49DC147F60B100C51B13 /* game.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 25DD88370B31F5F00079B759 /* game.dylib */; };
-		2DFD49DD147F60B100C51B13 /* libidlib_pic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 812259800912BF1D005D34B9 /* libidlib_pic.a */; };
 		812258110912BC79005D34B9 /* snd_efxfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8122565F0912BC78005D34B9 /* snd_efxfile.cpp */; };
 		812258120912BC79005D34B9 /* GEWindowWrapper_stub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 812256620912BC78005D34B9 /* GEWindowWrapper_stub.cpp */; };
 		812258130912BC79005D34B9 /* edit_stub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 812256630912BC79005D34B9 /* edit_stub.cpp */; };
@@ -232,7 +232,6 @@
 		8122590A0912BC79005D34B9 /* CollisionModel_rotate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8122580A0912BC79005D34B9 /* CollisionModel_rotate.cpp */; };
 		8122590B0912BC79005D34B9 /* CollisionModel_trace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8122580B0912BC79005D34B9 /* CollisionModel_trace.cpp */; };
 		8122590C0912BC79005D34B9 /* CollisionModel_translate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8122580C0912BC79005D34B9 /* CollisionModel_translate.cpp */; };
-		812259930912BF7F005D34B9 /* libidlib_nopic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 812259820912BF1D005D34B9 /* libidlib_nopic.a */; };
 		812259940912BF87005D34B9 /* liboggVorbis_nopic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8122598F0912BF38005D34B9 /* liboggVorbis_nopic.a */; };
 		812259FF0912C27D005D34B9 /* Doom 3.rsrc in Resources */ = {isa = PBXBuildFile; fileRef = 812259FD0912C27C005D34B9 /* Doom 3.rsrc */; };
 		81225A000912C27D005D34B9 /* Doom3.icns in Resources */ = {isa = PBXBuildFile; fileRef = 812259FE0912C27C005D34B9 /* Doom3.icns */; };
@@ -244,33 +243,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		136034931604FD23002E2426 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1360348E1604FD23002E2426 /* idlib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC046055464E500DB518D;
+			remoteInfo = idlib_pic;
+		};
+		136034951604FD23002E2426 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1360348E1604FD23002E2426 /* idlib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 81C858490912AD370095BC33;
+			remoteInfo = idlib_nopic;
+		};
 		25DD88360B31F5F00079B759 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 25DD882E0B31F5F00079B759 /* d3xp.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC0630554660B00DB518D;
 			remoteInfo = game;
-		};
-		8122597F0912BF1D005D34B9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 812259790912BF1D005D34B9 /* idlib.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC046055464E500DB518D;
-			remoteInfo = idlib_pic;
-		};
-		812259810912BF1D005D34B9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 812259790912BF1D005D34B9 /* idlib.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 81C858490912AD370095BC33;
-			remoteInfo = idlib_nopic;
-		};
-		812259830912BF2B005D34B9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 812259790912BF1D005D34B9 /* idlib.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 81C858480912AD370095BC33;
-			remoteInfo = idlib_nopic;
 		};
 		8122598E0912BF38005D34B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -305,17 +297,18 @@
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		136034801604FC0D002E2426 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = DEVELOPER_DIR; };
+		136034821604FC2D002E2426 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libcurl.dylib; sourceTree = DEVELOPER_DIR; };
+		136034841604FC45002E2426 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreAudio.framework; sourceTree = DEVELOPER_DIR; };
+		136034861604FC54002E2426 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
+		136034881604FC60002E2426 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		1360348A1604FC6C002E2426 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Carbon.framework; sourceTree = DEVELOPER_DIR; };
+		1360348E1604FD23002E2426 /* idlib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = idlib.xcodeproj; sourceTree = "<group>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		25DD882E0B31F5F00079B759 /* d3xp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = d3xp.xcodeproj; sourceTree = "<group>"; };
 		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		2DFD49B4147F592900C51B13 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework; sourceTree = DEVELOPER_DIR; };
-		2DFD49B7147F593500C51B13 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
-		2DFD49BA147F594000C51B13 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
-		2DFD49BC147F594900C51B13 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreAudio.framework; sourceTree = DEVELOPER_DIR; };
-		2DFD49BE147F5F1000C51B13 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = SDKs/MacOSX10.6.sdk/usr/lib/libcurl.dylib; sourceTree = DEVELOPER_DIR; };
-		2DFD49C0147F5FDB00C51B13 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = DEVELOPER_DIR; };
 		8122565F0912BC78005D34B9 /* snd_efxfile.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = snd_efxfile.cpp; path = ../../sound/snd_efxfile.cpp; sourceTree = SOURCE_ROOT; };
 		812256620912BC78005D34B9 /* GEWindowWrapper_stub.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = GEWindowWrapper_stub.cpp; path = ../../tools/guied/GEWindowWrapper_stub.cpp; sourceTree = SOURCE_ROOT; };
 		812256630912BC79005D34B9 /* edit_stub.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = edit_stub.cpp; path = ../../tools/edit_stub.cpp; sourceTree = SOURCE_ROOT; };
@@ -653,12 +646,7 @@
 		8122580A0912BC79005D34B9 /* CollisionModel_rotate.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionModel_rotate.cpp; sourceTree = "<group>"; };
 		8122580B0912BC79005D34B9 /* CollisionModel_trace.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionModel_trace.cpp; sourceTree = "<group>"; };
 		8122580C0912BC79005D34B9 /* CollisionModel_translate.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionModel_translate.cpp; sourceTree = "<group>"; };
-		812259790912BF1D005D34B9 /* idlib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = idlib.xcodeproj; sourceTree = "<group>"; };
 		812259890912BF38005D34B9 /* oggVorbis.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = oggVorbis.xcodeproj; sourceTree = "<group>"; };
-		812259A30912BFDC005D34B9 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
-		812259A40912BFDC005D34B9 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
-		812259A60912BFDC005D34B9 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
-		812259B40912C056005D34B9 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
 		812259FD0912C27C005D34B9 /* Doom 3.rsrc */ = {isa = PBXFileReference; lastKnownFileType = archive.rsrc; path = "Doom 3.rsrc"; sourceTree = "<group>"; };
 		812259FE0912C27C005D34B9 /* Doom3.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Doom3.icns; sourceTree = "<group>"; };
 		81225A0C0912C2D3005D34B9 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ASLCore.nib; sourceTree = "<group>"; };
@@ -677,17 +665,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				136034971604FE81002E2426 /* libidlib_pic.a in Frameworks */,
+				1360348B1604FC6C002E2426 /* Carbon.framework in Frameworks */,
+				136034891604FC60002E2426 /* IOKit.framework in Frameworks */,
+				136034871604FC54002E2426 /* OpenGL.framework in Frameworks */,
+				136034851604FC45002E2426 /* CoreAudio.framework in Frameworks */,
+				136034831604FC2D002E2426 /* libcurl.dylib in Frameworks */,
+				136034811604FC0D002E2426 /* OpenAL.framework in Frameworks */,
 				2DFD49DB147F60B100C51B13 /* game.dylib in Frameworks */,
 				2DFD49DC147F60B100C51B13 /* game.dylib in Frameworks */,
-				2DFD49DD147F60B100C51B13 /* libidlib_pic.a in Frameworks */,
-				2DFD49C1147F5FDB00C51B13 /* OpenAL.framework in Frameworks */,
-				2DFD49BF147F5F1000C51B13 /* libcurl.dylib in Frameworks */,
-				2DFD49BD147F594900C51B13 /* CoreAudio.framework in Frameworks */,
-				2DFD49BB147F594000C51B13 /* OpenGL.framework in Frameworks */,
-				2DFD49B9147F593500C51B13 /* IOKit.framework in Frameworks */,
-				2DFD49B5147F592900C51B13 /* Carbon.framework in Frameworks */,
 				812259940912BF87005D34B9 /* liboggVorbis_nopic.a in Frameworks */,
-				812259930912BF7F005D34B9 /* libidlib_nopic.a in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -713,6 +700,15 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
+		1360348F1604FD23002E2426 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				136034941604FD23002E2426 /* libidlib_pic.a */,
+				136034961604FD23002E2426 /* libidlib_nopic.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -732,18 +728,18 @@
 		29B97314FDCFA39411CA2CEA /* Doom3 */ = {
 			isa = PBXGroup;
 			children = (
-				2DFD49C0147F5FDB00C51B13 /* OpenAL.framework */,
-				2DFD49BE147F5F1000C51B13 /* libcurl.dylib */,
-				2DFD49BC147F594900C51B13 /* CoreAudio.framework */,
-				2DFD49BA147F594000C51B13 /* OpenGL.framework */,
-				2DFD49B7147F593500C51B13 /* IOKit.framework */,
-				2DFD49B4147F592900C51B13 /* Carbon.framework */,
+				1360348A1604FC6C002E2426 /* Carbon.framework */,
+				136034881604FC60002E2426 /* IOKit.framework */,
+				136034861604FC54002E2426 /* OpenGL.framework */,
+				136034841604FC45002E2426 /* CoreAudio.framework */,
+				136034821604FC2D002E2426 /* libcurl.dylib */,
+				136034801604FC0D002E2426 /* OpenAL.framework */,
 				25DD882E0B31F5F00079B759 /* d3xp.xcodeproj */,
 				812256420912BC26005D34B9 /* Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				812259790912BF1D005D34B9 /* idlib.xcodeproj */,
+				1360348E1604FD23002E2426 /* idlib.xcodeproj */,
 				812259890912BF38005D34B9 /* oggVorbis.xcodeproj */,
 				81225B840912C731005D34B9 /* game.xcodeproj */,
 			);
@@ -767,10 +763,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				812259B40912C056005D34B9 /* CoreAudio.framework */,
-				812259A30912BFDC005D34B9 /* Carbon.framework */,
-				812259A40912BFDC005D34B9 /* IOKit.framework */,
-				812259A60912BFDC005D34B9 /* OpenGL.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
@@ -1286,15 +1278,6 @@
 			path = ../../cm;
 			sourceTree = SOURCE_ROOT;
 		};
-		8122597A0912BF1D005D34B9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				812259800912BF1D005D34B9 /* libidlib_pic.a */,
-				812259820912BF1D005D34B9 /* libidlib_nopic.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		8122598A0912BF38005D34B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1325,7 +1308,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				812259840912BF2B005D34B9 /* PBXTargetDependency */,
 				812259910912BF43005D34B9 /* PBXTargetDependency */,
 				81225B8D0912C73C005D34B9 /* PBXTargetDependency */,
 			);
@@ -1366,8 +1348,8 @@
 					ProjectRef = 81225B840912C731005D34B9 /* game.xcodeproj */;
 				},
 				{
-					ProductGroup = 8122597A0912BF1D005D34B9 /* Products */;
-					ProjectRef = 812259790912BF1D005D34B9 /* idlib.xcodeproj */;
+					ProductGroup = 1360348F1604FD23002E2426 /* Products */;
+					ProjectRef = 1360348E1604FD23002E2426 /* idlib.xcodeproj */;
 				},
 				{
 					ProductGroup = 8122598A0912BF38005D34B9 /* Products */;
@@ -1382,25 +1364,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		136034941604FD23002E2426 /* libidlib_pic.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libidlib_pic.a;
+			remoteRef = 136034931604FD23002E2426 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		136034961604FD23002E2426 /* libidlib_nopic.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libidlib_nopic.a;
+			remoteRef = 136034951604FD23002E2426 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		25DD88370B31F5F00079B759 /* game.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			path = game.dylib;
 			remoteRef = 25DD88360B31F5F00079B759 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		812259800912BF1D005D34B9 /* libidlib_pic.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libidlib_pic.a;
-			remoteRef = 8122597F0912BF1D005D34B9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		812259820912BF1D005D34B9 /* libidlib_nopic.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libidlib_nopic.a;
-			remoteRef = 812259810912BF1D005D34B9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		8122598F0912BF38005D34B9 /* liboggVorbis_nopic.a */ = {
@@ -1662,11 +1644,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		812259840912BF2B005D34B9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = idlib_nopic;
-			targetProxy = 812259830912BF2B005D34B9 /* PBXContainerItemProxy */;
-		};
 		812259910912BF43005D34B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = oggVorbis_nopic;
