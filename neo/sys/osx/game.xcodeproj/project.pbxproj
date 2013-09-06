@@ -625,6 +625,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "id Software LLC";
 			};
 			buildConfigurationList = 81225A280912C3A4005D34B9 /* Build configuration list for PBXProject "game" */;
@@ -760,11 +761,11 @@
 		81225A250912C3A4005D34B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_MODEL_TUNING = G5;
@@ -776,7 +777,7 @@
 					GAME_DLL,
 					__WITH_PB__,
 				);
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = /usr/local/lib;
@@ -788,8 +789,8 @@
 					"$(OTHER_CFLAGS)",
 					"-fpermissive",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = game;
+				SDKROOT = macosx10.8;
 				ZERO_LINK = YES;
 			};
 			name = Debug;
@@ -798,6 +799,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -811,7 +813,7 @@
 					GAME_DLL,
 					__WITH_PB__,
 				);
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				LIBRARY_STYLE = DYNAMIC;
 				MACH_O_TYPE = mh_dylib;
 				ONLY_ACTIVE_ARCH = YES;
@@ -825,8 +827,8 @@
 					"$(OTHER_CFLAGS)",
 					"-fpermissive",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = game;
+				SDKROOT = macosx10.8;
 				SYMROOT = build;
 				ZERO_LINK = NO;
 			};
@@ -846,7 +848,7 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 				VALID_ARCHS = i386;
 			};
 			name = Debug;
@@ -874,7 +876,7 @@
 					"-fomit-frame-pointer",
 					"-fno-common",
 				);
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 				VALID_ARCHS = i386;
 			};
 			name = Release;

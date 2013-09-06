@@ -816,7 +816,7 @@
 					"-fpermissive",
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = "game-d3xp";
+				PRODUCT_NAME = game;
 				SYMROOT = build;
 				ZERO_LINK = NO;
 			};
