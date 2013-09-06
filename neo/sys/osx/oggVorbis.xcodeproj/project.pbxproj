@@ -427,7 +427,6 @@
 				LIBRARY_STYLE = STATIC;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = oggVorbis_nopic;
-				SDKROOT = macosx;
 				ZERO_LINK = YES;
 			};
 			name = Debug;
@@ -455,7 +454,6 @@
 					"-fpermissive",
 				);
 				PRODUCT_NAME = oggVorbis_nopic;
-				SDKROOT = macosx;
 				SYMROOT = build;
 				ZERO_LINK = NO;
 			};
@@ -471,8 +469,8 @@
 				GCC_OPTIMIZATION_LEVEL = 1;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = ../../sound/OggVorbis/vorbissrc/;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				SDKROOT = macosx;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx10.8;
 				VALID_ARCHS = i386;
 			};
 			name = Debug;
@@ -487,7 +485,7 @@
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = ../../sound/OggVorbis/vorbissrc/;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CFLAGS = (
 					"-finline",
 					"-finline-limit=1000",
@@ -498,7 +496,7 @@
 					"-fomit-frame-pointer",
 					"-fno-common",
 				);
-				SDKROOT = macosx;
+				SDKROOT = macosx10.8;
 				VALID_ARCHS = i386;
 			};
 			name = Release;

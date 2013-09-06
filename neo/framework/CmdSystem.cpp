@@ -475,6 +475,14 @@ void idCmdSystemLocal::ExecuteTokenizedString( const idCmdArgs &args ) {
 	// check registered command functions	
 	for ( prev = &commands; *prev; prev = &cmd->next ) {
 		cmd = *prev;
+#ifdef __APPLE__
+		//PLG
+        // workaround for bug in XCode 4.2: accept but ignore
+        // argument -NSDocumentRevisionsDebugMode=YES
+		if ( idStr::Icmp( args.Argv( 0 ), "-NSDocumentRevisionsDebugMode" ) == 0 ) {
+			return;
+		}
+#endif
 		if ( idStr::Icmp( args.Argv( 0 ), cmd->name ) == 0 ) {
 			// rearrange the links so that the command will be
 			// near the head of the list next time it is used

@@ -49,7 +49,8 @@ Issue the scons command in the neo/ folder.
 Compiling on MacOS X:
 ---------------------------
 
-XCode 3.2 project is under neo/sys/osx/
+Xcode 4.6.3 project is under neo/sys/osx/
+Mac OS X 10.8.
 
 Back End Rendering of Stencil Shadows:
 --------------------------------------
