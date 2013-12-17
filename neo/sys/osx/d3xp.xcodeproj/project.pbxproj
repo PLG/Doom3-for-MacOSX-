@@ -788,7 +788,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = game;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 				ZERO_LINK = YES;
 			};
 			name = Debug;
@@ -820,7 +820,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "game-d3xp";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 				SYMROOT = build;
 				ZERO_LINK = NO;
 			};
@@ -855,7 +855,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = game;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 			};
 			name = Default;
 		};

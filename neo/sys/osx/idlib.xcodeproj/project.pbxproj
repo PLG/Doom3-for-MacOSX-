@@ -928,7 +928,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = idlib_pic;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 				ZERO_LINK = YES;
 			};
 			name = Debug;
@@ -956,7 +956,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = idlib_pic;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 				SYMROOT = build;
 				ZERO_LINK = NO;
 			};
