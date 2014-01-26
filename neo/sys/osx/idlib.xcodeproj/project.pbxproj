@@ -241,7 +241,8 @@
 		81C858C20912AD510095BC33 /* Timer.h in Headers */ = {isa = PBXBuildFile; fileRef = 81C857C60912AD0D0095BC33 /* Timer.h */; };
 		81C858C30912AD510095BC33 /* Token.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81C857C70912AD0D0095BC33 /* Token.cpp */; };
 		81C858C40912AD510095BC33 /* Token.h in Headers */ = {isa = PBXBuildFile; fileRef = 81C857C80912AD0D0095BC33 /* Token.h */; };
-		D7EDC0F1176072B400AB19C5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7EDC0F0176072B400AB19C5 /* OpenGL.framework */; };
+		D7D7BBF51895335E000A495C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D7BBF41895335E000A495C /* OpenGL.framework */; };
+		D7D7BBF618953367000A495C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D7BBF41895335E000A495C /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -364,7 +365,7 @@
 		81C857C80912AD0D0095BC33 /* Token.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Token.h; path = ../../idlib/Token.h; sourceTree = SOURCE_ROOT; };
 		81C858490912AD370095BC33 /* libidlib_nopic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libidlib_nopic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AAC046055464E500DB518D /* libidlib_pic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libidlib_pic.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7EDC0F0176072B400AB19C5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
+		D7D7BBF41895335E000A495C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +373,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7D7BBF618953367000A495C /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +381,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7EDC0F1176072B400AB19C5 /* OpenGL.framework in Frameworks */,
+				D7D7BBF51895335E000A495C /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +391,7 @@
 		08FB7794FE84155DC02AAC07 /* idlib */ = {
 			isa = PBXGroup;
 			children = (
-				D7EDC0F0176072B400AB19C5 /* OpenGL.framework */,
+				D7D7BBF41895335E000A495C /* OpenGL.framework */,
 				08FB7795FE84155DC02AAC07 /* Source */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
 			);
@@ -981,7 +983,7 @@
 					"$(OTHER_CFLAGS)",
 					"-fpermissive",
 				);
-				SDKROOT = macosx;
+				SDKROOT = macosx10.8;
 				USE_SEPARATE_HEADERMAPS = YES;
 				VALID_ARCHS = i386;
 				WARNING_CFLAGS = "";
@@ -1007,7 +1009,7 @@
 					"$(OTHER_CFLAGS)",
 					"-fpermissive",
 				);
-				SDKROOT = macosx;
+				SDKROOT = macosx10.8;
 				USE_SEPARATE_HEADERMAPS = YES;
 				VALID_ARCHS = i386;
 				WARNING_CFLAGS = "";
