@@ -769,7 +769,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "id Software LLC";
 			};
 			buildConfigurationList = 81C857270912ACE80095BC33 /* Build configuration list for PBXProject "idlib" */;
@@ -981,9 +981,10 @@
 					"$(OTHER_CFLAGS)",
 					"-fpermissive",
 				);
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 				USE_SEPARATE_HEADERMAPS = YES;
 				VALID_ARCHS = i386;
+				WARNING_CFLAGS = "";
 			};
 			name = Debug;
 		};
@@ -1006,9 +1007,10 @@
 					"$(OTHER_CFLAGS)",
 					"-fpermissive",
 				);
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 				USE_SEPARATE_HEADERMAPS = YES;
 				VALID_ARCHS = i386;
+				WARNING_CFLAGS = "";
 			};
 			name = Release;
 		};
