@@ -1502,7 +1502,7 @@ NSDictionary *Sys_GetMatchingDisplayMode( glimpParms_t parms ) {
 	modeCount = [displayModes count];
 	if (verbose) {
 		common->Printf( "%d modes avaliable\n", modeCount);
-		common->Printf( "Current mode is %s\n", [[(id)CGDisplayCurrentMode(glw_state.display) description] cString]);
+		common->Printf( "Current mode is %s\n", [[(id)CGDisplayCurrentMode(glw_state.display) description] cStringUsingEncoding:NSUTF8StringEncoding]);
 	}
     
 	// Default to the current desktop mode
@@ -1514,7 +1514,7 @@ NSDictionary *Sys_GetMatchingDisplayMode( glimpParms_t parms ) {
         
 		mode = [displayModes objectAtIndex: modeIndex];
 		if (verbose) {
-			common->Printf( " mode %d -- %s\n", modeIndex, [[mode description] cString]);
+			common->Printf( " mode %d -- %s\n", modeIndex, [[mode description] cStringUsingEncoding:NSUTF8StringEncoding]);
 		}
 
 		// Make sure we get the right size

@@ -105,7 +105,7 @@ static OSErr DoRegCodeDialog( char* ioRegCode1 );
 		NSAssert(sizeof(bool) == 1, @"sizeof(bool) should equal 1 byte");
         [self quakeMain];
     } NS_HANDLER {
-        Sys_Error( (const char *)[ [ localException reason ] cString ] );
+        Sys_Error( (const char *)[ [ localException reason ] cStringUsingEncoding:NSUTF8StringEncoding ] );
     } NS_ENDHANDLER;
     Sys_Quit();
 }
@@ -206,7 +206,7 @@ extern void CL_Quit_f(void);
 
         requestedServer = [pasteboard stringForType:NSStringPboardType];
         if (requestedServer) {
-            Cbuf_AddText( va( "connect %s\n", [requestedServer cString]));
+            Cbuf_AddText( va( "connect %s\n", [requestedServer cStringUsingEncoding:NSUTF8StringEncoding]));
             return;
         }
     }
@@ -256,7 +256,7 @@ extern void CL_Quit_f(void);
     arguments = [processInfo arguments];
     argumentCount = [arguments count];
     for (argumentIndex = 0; argumentIndex < argumentCount; argumentIndex++) {
-        argv[argc++] = strdup([[arguments objectAtIndex:argumentIndex] cString]);
+        argv[argc++] = strdup([[arguments objectAtIndex:argumentIndex] cStringUsingEncoding:NSUTF8StringEncoding]);
     }
     if (![[NSFileManager defaultManager] changeCurrentDirectoryPath:[[NSBundle mainBundle] resourcePath]]) {
         Sys_Error("Could not access application resources");
@@ -417,7 +417,7 @@ Sys_EXEPath
 */
 const char *Sys_EXEPath( void ) {
 	static char exepath[ 1024 ];
-	strncpy( exepath, [ [ [ NSBundle mainBundle ] bundlePath ] cString ], 1024 );
+	strncpy( exepath, [ [ [ NSBundle mainBundle ] bundlePath ] cStringUsingEncoding:NSUTF8StringEncoding ], 1024 );
 	return exepath;
 }
 
@@ -428,9 +428,9 @@ const char *Sys_EXEPath( void ) {
  */
 const char *Sys_DefaultSavePath(void) {
 #if defined( ID_DEMO_BUILD )
-	sprintf( savepath, "%s/Library/Application Support/Doom 3 Demo", [NSHomeDirectory() cString] );
+	sprintf( savepath, "%s/Library/Application Support/Doom 3 Demo", [NSHomeDirectory() cStringUsingEncoding:NSUTF8StringEncoding] );
 #else
-	sprintf( savepath, "%s/Library/Application Support/Doom 3", [NSHomeDirectory() cString] );
+	sprintf( savepath, "%s/Library/Application Support/Doom 3", [NSHomeDirectory() cStringUsingEncoding:NSUTF8StringEncoding] );
 #endif
 	return savepath.c_str();
 }
@@ -442,7 +442,7 @@ Sys_DefaultBasePath
 */
 const char *Sys_DefaultBasePath(void) {
 	static char basepath[ 1024 ];
-	strncpy( basepath, [ [ [ NSBundle mainBundle ] bundlePath ] cString ], 1024 );
+	strncpy( basepath, [ [ [ NSBundle mainBundle ] bundlePath ] cStringUsingEncoding:NSUTF8StringEncoding ], 1024 );
 	char *snap = strrchr( basepath, '/' );
 	if ( snap ) {
 		*snap = '\0';
