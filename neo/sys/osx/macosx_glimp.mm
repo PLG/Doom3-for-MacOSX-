@@ -390,8 +390,12 @@ static bool CreateGameWindow(  glimpParms_t parms ) {
 		CGLError err;
 
 		glw_state.window = NULL;
-        
-		err = CGLSetFullScreen(OSX_GetCGLContext());
+
+		CGDirectDisplayID display = CGMainDisplayID (); // 1
+		CGOpenGLDisplayMask myDisplayMask = CGDisplayIDToOpenGLDisplayMask (display);
+
+		err = CGLSetFullScreenOnDisplay(OSX_GetCGLContext(), (GLuint)myDisplayMask);
+
 		if (err) {
 			CGDisplayRestoreColorSyncSettings();
 			CGDisplaySwitchToMode(glw_state.display, (CFDictionaryRef)glw_state.desktopMode);
