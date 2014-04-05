@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2DFD49B3147F58B000C51B13 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFD49B2147F58B000C51B13 /* OpenGL.framework */; };
 		81C857480912AD020095BC33 /* BitMsg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81C857470912AD020095BC33 /* BitMsg.cpp */; };
 		81C857C90912AD0D0095BC33 /* Base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81C8574A0912AD0D0095BC33 /* Base64.cpp */; };
 		81C857CA0912AD0D0095BC33 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 81C8574B0912AD0D0095BC33 /* Base64.h */; };
@@ -245,7 +244,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2DFD49B2147F58B000C51B13 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
 		81C857470912AD020095BC33 /* BitMsg.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = BitMsg.cpp; path = ../../idlib/BitMsg.cpp; sourceTree = SOURCE_ROOT; };
 		81C8574A0912AD0D0095BC33 /* Base64.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = Base64.cpp; path = ../../idlib/Base64.cpp; sourceTree = SOURCE_ROOT; };
 		81C8574B0912AD0D0095BC33 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Base64.h; path = ../../idlib/Base64.h; sourceTree = SOURCE_ROOT; };
@@ -379,7 +377,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DFD49B3147F58B000C51B13 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +386,6 @@
 		08FB7794FE84155DC02AAC07 /* idlib */ = {
 			isa = PBXGroup;
 			children = (
-				2DFD49B2147F58B000C51B13 /* OpenGL.framework */,
 				08FB7795FE84155DC02AAC07 /* Source */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
 			);
@@ -920,7 +916,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = /usr/local/lib;
@@ -928,7 +924,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = idlib_pic;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.8;
 				ZERO_LINK = YES;
 			};
 			name = Debug;
@@ -942,7 +938,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				LIBRARY_STYLE = STATIC;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
@@ -957,7 +953,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = idlib_pic;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.8;
 				SYMROOT = build;
 				ZERO_LINK = NO;
 			};
@@ -1022,7 +1018,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				INSTALL_PATH = "$(HOME)/lib";
 				LIBRARY_STYLE = STATIC;
 				OTHER_CFLAGS = "";
@@ -1049,7 +1045,7 @@
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				LIBRARY_STYLE = STATIC;
 				OTHER_CFLAGS = (
 					"-finline",
