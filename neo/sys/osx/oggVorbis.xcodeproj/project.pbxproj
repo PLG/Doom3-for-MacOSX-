@@ -472,9 +472,9 @@
 				GCC_ONE_BYTE_BOOL = YES;
 				GCC_OPTIMIZATION_LEVEL = 1;
 				HEADER_SEARCH_PATHS = ../../sound/OggVorbis/vorbissrc/;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.9;
 				VALID_ARCHS = i386;
 			};
 			name = Debug;
@@ -488,7 +488,7 @@
 				GCC_ONE_BYTE_BOOL = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				HEADER_SEARCH_PATHS = ../../sound/OggVorbis/vorbissrc/;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CFLAGS = (
 					"-finline",
 					"-finline-limit=1000",
@@ -499,7 +499,7 @@
 					"-fomit-frame-pointer",
 					"-fno-common",
 				);
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.9;
 				VALID_ARCHS = i386;
 			};
 			name = Release;

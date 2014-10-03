@@ -1694,6 +1694,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "";
@@ -1729,6 +1730,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
@@ -1779,14 +1781,14 @@
 					"$(MAIN_CPP_DEFINES)",
 					MACOS_X,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MAIN_CPP_DEFINES = _DEBUG;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-fpermissive",
 				);
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.9;
 				VALID_ARCHS = i386;
 			};
 			name = Debug;
@@ -1803,7 +1805,7 @@
 					"$(MAIN_CPP_DEFINES)",
 					MACOS_X,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-finline",
@@ -1815,7 +1817,7 @@
 					"-fomit-frame-pointer",
 					"-fno-common",
 				);
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.9;
 				VALID_ARCHS = i386;
 			};
 			name = Release;
