@@ -949,7 +949,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-finline",
-					"-finline-limit=1000",
 					"-fomit-frame-pointer",
 					"-fno-common",
 				);
@@ -1059,7 +1058,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-finline",
-					"-finline-limit=1000",
 					"-fomit-frame-pointer",
 					"-fno-common",
 				);

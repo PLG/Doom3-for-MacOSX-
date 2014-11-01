@@ -448,7 +448,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-finline",
-					"-finline-limit=1000",
 					"-fomit-frame-pointer",
 					"-fno-common",
 				);
@@ -489,10 +488,6 @@
 				GCC_OPTIMIZATION_LEVEL = 3;
 				HEADER_SEARCH_PATHS = ../../sound/OggVorbis/vorbissrc/;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				OTHER_CFLAGS = (
-					"-finline",
-					"-finline-limit=1000",
-				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-fpermissive",
