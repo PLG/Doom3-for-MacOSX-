@@ -625,7 +625,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "id Software LLC";
 			};
 			buildConfigurationList = 81225A280912C3A4005D34B9 /* Build configuration list for PBXProject "game" */;
@@ -790,7 +790,7 @@
 					"-fpermissive",
 				);
 				PRODUCT_NAME = game;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.9;
 				ZERO_LINK = YES;
 			};
 			name = Debug;
@@ -827,7 +827,7 @@
 					"-fpermissive",
 				);
 				PRODUCT_NAME = game;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.9;
 				SYMROOT = build;
 				ZERO_LINK = NO;
 			};

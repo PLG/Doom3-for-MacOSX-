@@ -1312,7 +1312,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "id Software LLC";
 			};
 			buildConfigurationList = 8191F1640912BBCD006AB5A4 /* Build configuration list for PBXProject "Doom3" */;
