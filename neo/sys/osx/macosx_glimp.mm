@@ -297,21 +297,6 @@ static bool CreateGameWindow(  glimpParms_t parms ) {
 
 		// Fade all screens to black
 		//        Sys_FadeScreens();
-        
-		err = Sys_CaptureActiveDisplays();
-		if ( err != CGDisplayNoErr ) {
-			CGDisplayRestoreColorSyncSettings();
-			common->Printf(  " Unable to capture displays err = %d\n", err );
-			return false;
-		}
-
-		err = CGDisplaySwitchToMode(glw_state.display, (CFDictionaryRef)glw_state.gameMode);
-		if ( err != CGDisplayNoErr ) {
-			CGDisplayRestoreColorSyncSettings();
-			ReleaseAllDisplays();
-			common->Printf(  " Unable to set display mode, err = %d\n", err );
-			return false;
-		}
 	} else {
 		glw_state.gameMode = glw_state.desktopMode;
 	}
@@ -354,20 +339,20 @@ static bool CreateGameWindow(  glimpParms_t parms ) {
 	}
 #endif
 	
+	NSScreen*		 screen;
+	NSRect           windowRect;
+	int				 displayIndex;
+	int				 displayCount;
+	
+	displayIndex = r_screen.GetInteger();
+	displayCount = [[NSScreen screens] count];
+	if ( displayIndex < 0 || displayIndex >= displayCount ) {
+		screen = [NSScreen mainScreen];
+	} else {
+		screen = [[NSScreen screens] objectAtIndex:displayIndex];
+	}
+	
 	if ( !parms.fullScreen ) {
-		NSScreen*		 screen;
-		NSRect           windowRect;
-		int				 displayIndex;
-		int				 displayCount;
-		
-		displayIndex = r_screen.GetInteger();
-		displayCount = [[NSScreen screens] count];
-		if ( displayIndex < 0 || displayIndex >= displayCount ) {
-			screen = [NSScreen mainScreen];
-		} else {
-			screen = [[NSScreen screens] objectAtIndex:displayIndex];
-		}
-
 		NSRect r = [screen frame];
 		windowRect.origin.x =  ((short)r.size.width - parms.width) / 2;
 		windowRect.origin.y  = ((short)r.size.height - parms.height) / 2;
@@ -391,19 +376,47 @@ static bool CreateGameWindow(  glimpParms_t parms ) {
 		// Sync input rect with where the window actually is...
 		Sys_UpdateWindowMouseInputRect();
 	} else {
-		CGLError err;
+		NSRect r = [screen frame];
+		windowRect.origin.x =  0.0f;
+		windowRect.origin.y  = 0.0f;
+		windowRect.size.width = r.size.width;
+		windowRect.size.height = r.size.height;
 
-		glw_state.window = NULL;
-        
-		err = CGLSetFullScreen(OSX_GetCGLContext());
-		if (err) {
-			CGDisplayRestoreColorSyncSettings();
-			CGDisplaySwitchToMode(glw_state.display, (CFDictionaryRef)glw_state.desktopMode);
-			ReleaseAllDisplays();
-			common->Printf("CGLSetFullScreen -> %d (%s)\n", err, CGLErrorString(err));
-			return false;
+		if ((int)windowRect.size.width != parms.width ||
+			(int)windowRect.size.height != parms.height) {
+			CGLError err;
+			
+			GLint gameDimensions[2] = { parms.width, parms.height };
+			err = CGLSetParameter(OSX_GetCGLContext(), kCGLCPSurfaceBackingSize, gameDimensions);
+			if (err) {
+				common->Printf("CGLSetParameter -> %d (%s)\n", err, CGLErrorString(err));
+				return false;
+			}
+			
+			err = CGLEnable(OSX_GetCGLContext(), kCGLCESurfaceBackingSize);
+			if (err) {
+				common->Printf("CGLEnable -> %d (%s)\n", err, CGLErrorString(err));
+				return false;
+			}
 		}
 
+		glw_state.window = [NSWindow alloc];
+		[glw_state.window initWithContentRect:windowRect styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:YES screen:screen];
+		
+		[glw_state.window setOpaque:YES];
+		[glw_state.window setHidesOnDeactivate:YES];
+		[glw_state.window setLevel:NSMainMenuWindowLevel+1];
+		
+		[glw_state.window makeKeyAndOrderFront:nil];
+		
+		// Always get mouse moved events (if mouse support is turned off (rare)
+		// the event system will filter them out.
+		[glw_state.window setAcceptsMouseMovedEvents:YES];
+		
+		// Direct the context to draw in this window
+		[OSX_GetNSGLContext() setView: [glw_state.window contentView]];
+		
+		// Sync input rect with where the window actually is...
 		Sys_SetMouseInputRect( CGDisplayBounds( glw_state.display ) );
 	}
 
@@ -441,15 +454,7 @@ void Sys_ResumeGL () {
 	if (glw_state.glPauseCount) {
 		glw_state.glPauseCount--;
 		if (!glw_state.glPauseCount) {
-			if (!glConfig.isFullscreen) {
-				[OSX_GetNSGLContext() setView: [glw_state.window contentView]];
-			} else {
-				CGLError err;
-                
-				err = CGLSetFullScreen(OSX_GetCGLContext());
-				if (err)
-					common->Printf("CGLSetFullScreen -> %d (%s)\n", err, CGLErrorString(err));
-			}
+			[OSX_GetNSGLContext() setView: [glw_state.window contentView]];
 		}
 	}
 }
