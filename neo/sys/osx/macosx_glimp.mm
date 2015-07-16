@@ -63,7 +63,11 @@ static bool isHidden = false;
 @implementation NSOpenGLContext (CGLContextAccess)
 - (CGLContextObj) cglContext;
 {
+#if __MAC_OS_X_VERSION_MAX_ALLOWED >= 1090
 	return _contextAuxiliary;
+#else
+	return [self CGLContextObj];
+#endif
 }
 @end
 
