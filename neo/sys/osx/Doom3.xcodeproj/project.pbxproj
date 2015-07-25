@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2DFD49DB147F60B100C51B13 /* game.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81225B8B0912C731005D34B9 /* game.dylib */; };
-		2DFD49DC147F60B100C51B13 /* game.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 25DD88370B31F5F00079B759 /* game.dylib */; };
-		2DFD49DD147F60B100C51B13 /* libidlib_pic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 812259800912BF1D005D34B9 /* libidlib_pic.a */; };
+		658BACB01B643E8100B1816F /* game.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25DD88370B31F5F00079B759 /* game.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		658BACB11B643E9200B1816F /* game.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81225B8B0912C731005D34B9 /* game.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		812258110912BC79005D34B9 /* snd_efxfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8122565F0912BC78005D34B9 /* snd_efxfile.cpp */; };
 		812258120912BC79005D34B9 /* GEWindowWrapper_stub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 812256620912BC78005D34B9 /* GEWindowWrapper_stub.cpp */; };
 		812258130912BC79005D34B9 /* edit_stub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 812256630912BC79005D34B9 /* edit_stub.cpp */; };
@@ -251,6 +250,13 @@
 			remoteGlobalIDString = D2AAC0630554660B00DB518D;
 			remoteInfo = game;
 		};
+		658BACAB1B643C8600B1816F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25DD882E0B31F5F00079B759 /* d3xp.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC0620554660B00DB518D;
+			remoteInfo = "game-d3xp";
+		};
 		8122597F0912BF1D005D34B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 812259790912BF1D005D34B9 /* idlib.xcodeproj */;
@@ -301,6 +307,20 @@
 			remoteInfo = game;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		658BACAF1B643E7000B1816F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				658BACB11B643E9200B1816F /* game.dylib in CopyFiles */,
+				658BACB01B643E8100B1816F /* game.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -677,9 +697,6 @@
 				D7D7BBEB189532E6000A495C /* Carbon.framework in Frameworks */,
 				D7D7BBE9189532D9000A495C /* Cocoa.framework in Frameworks */,
 				D796927A17607FEE00A42598 /* libcurl.dylib in Frameworks */,
-				2DFD49DB147F60B100C51B13 /* game.dylib in Frameworks */,
-				2DFD49DC147F60B100C51B13 /* game.dylib in Frameworks */,
-				2DFD49DD147F60B100C51B13 /* libidlib_pic.a in Frameworks */,
 				812259940912BF87005D34B9 /* liboggVorbis_nopic.a in Frameworks */,
 				812259930912BF7F005D34B9 /* libidlib_nopic.a in Frameworks */,
 			);
@@ -1291,10 +1308,12 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				658BACAF1B643E7000B1816F /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				658BACAC1B643C8600B1816F /* PBXTargetDependency */,
 				812259840912BF2B005D34B9 /* PBXTargetDependency */,
 				812259910912BF43005D34B9 /* PBXTargetDependency */,
 				81225B8D0912C73C005D34B9 /* PBXTargetDependency */,
@@ -1633,6 +1652,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		658BACAC1B643C8600B1816F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "game-d3xp";
+			targetProxy = 658BACAB1B643C8600B1816F /* PBXContainerItemProxy */;
+		};
 		812259840912BF2B005D34B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = idlib_nopic;
