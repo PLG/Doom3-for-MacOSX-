@@ -303,7 +303,7 @@
 		81225AC10912C42F005D34B9 /* Weapon.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Weapon.h; path = ../../d3xp/Weapon.h; sourceTree = SOURCE_ROOT; };
 		81225AC20912C42F005D34B9 /* WorldSpawn.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = WorldSpawn.cpp; path = ../../d3xp/WorldSpawn.cpp; sourceTree = SOURCE_ROOT; };
 		81225AC30912C42F005D34B9 /* WorldSpawn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = WorldSpawn.h; path = ../../d3xp/WorldSpawn.h; sourceTree = SOURCE_ROOT; };
-		D2AAC0630554660B00DB518D /* game.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = game.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AAC0630554660B00DB518D /* d3xp.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = d3xp.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,7 +402,7 @@
 		1AB674ADFE9D54B511CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2AAC0630554660B00DB518D /* game.dylib */,
+				D2AAC0630554660B00DB518D /* d3xp.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -606,9 +606,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D2AAC0620554660B00DB518D /* game-d3xp */ = {
+		D2AAC0620554660B00DB518D /* d3xp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81225A240912C3A4005D34B9 /* Build configuration list for PBXNativeTarget "game-d3xp" */;
+			buildConfigurationList = 81225A240912C3A4005D34B9 /* Build configuration list for PBXNativeTarget "d3xp" */;
 			buildPhases = (
 				D2AAC0600554660B00DB518D /* Headers */,
 				D2AAC0610554660B00DB518D /* Sources */,
@@ -619,9 +619,9 @@
 			dependencies = (
 				81225A390912C3C8005D34B9 /* PBXTargetDependency */,
 			);
-			name = "game-d3xp";
+			name = d3xp;
 			productName = game;
-			productReference = D2AAC0630554660B00DB518D /* game.dylib */;
+			productReference = D2AAC0630554660B00DB518D /* d3xp.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -648,7 +648,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				D2AAC0620554660B00DB518D /* game-d3xp */,
+				D2AAC0620554660B00DB518D /* d3xp */,
 			);
 		};
 /* End PBXProject section */
@@ -786,7 +786,7 @@
 					"-fpermissive",
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = game;
+				PRODUCT_NAME = d3xp;
 				ZERO_LINK = YES;
 			};
 			name = Debug;
@@ -816,7 +816,7 @@
 					"-fpermissive",
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = game;
+				PRODUCT_NAME = d3xp;
 				SYMROOT = build;
 				ZERO_LINK = NO;
 			};
@@ -849,7 +849,7 @@
 					"-fpermissive",
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = game;
+				PRODUCT_NAME = d3xp;
 			};
 			name = Default;
 		};
@@ -919,7 +919,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		81225A240912C3A4005D34B9 /* Build configuration list for PBXNativeTarget "game-d3xp" */ = {
+		81225A240912C3A4005D34B9 /* Build configuration list for PBXNativeTarget "d3xp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81225A250912C3A4005D34B9 /* Debug */,
