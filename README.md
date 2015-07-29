@@ -6,6 +6,9 @@ http://fabiensanglard.net/doom3_macosx/index.php
 
 Set to build for MacOSX SDK 10.9.
 
+* Issue- OpenGL failure for full screen: kindly fixed by ```github/keegnotrub```
+* Issue- Heap Assertion FAILED: kindly fixed by ```github/MnM```
+
 ## Kostas "Bad Sector" Michalopoulos
 
 This is a fork of fabiensanglard's Doom 3 for Mac OSX ...fork :-P
@@ -33,3 +36,4 @@ For more informations, check http://fabiensanglard.net/doom3_macosx/index.php
 Happy hacking :) !
 
 Fabien
+
