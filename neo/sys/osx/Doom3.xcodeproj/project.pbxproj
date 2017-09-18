@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		658BACB01B643E8100B1816F /* game.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25DD88370B31F5F00079B759 /* game.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		658BACB01B643E8100B1816F /* d3xp.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25DD88370B31F5F00079B759 /* d3xp.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		658BACB11B643E9200B1816F /* game.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81225B8B0912C731005D34B9 /* game.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		812258110912BC79005D34B9 /* snd_efxfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8122565F0912BC78005D34B9 /* snd_efxfile.cpp */; };
 		812258120912BC79005D34B9 /* GEWindowWrapper_stub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 812256620912BC78005D34B9 /* GEWindowWrapper_stub.cpp */; };
@@ -316,7 +316,7 @@
 			dstSubfolderSpec = 7;
 			files = (
 				658BACB11B643E9200B1816F /* game.dylib in CopyFiles */,
-				658BACB01B643E8100B1816F /* game.dylib in CopyFiles */,
+				658BACB01B643E8100B1816F /* d3xp.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,7 +716,7 @@
 		25DD882F0B31F5F00079B759 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				25DD88370B31F5F00079B759 /* game.dylib */,
+				25DD88370B31F5F00079B759 /* d3xp.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1372,10 +1372,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		25DD88370B31F5F00079B759 /* game.dylib */ = {
+		25DD88370B31F5F00079B759 /* d3xp.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = game.dylib;
+			path = d3xp.dylib;
 			remoteRef = 25DD88360B31F5F00079B759 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1745,6 +1745,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "Doom 3";
+				SDKROOT = macosx10.12;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
@@ -1786,6 +1787,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "Doom 3";
+				SDKROOT = macosx10.12;
 				SYMROOT = build;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
@@ -1805,14 +1807,14 @@
 					"$(MAIN_CPP_DEFINES)",
 					MACOS_X,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MAIN_CPP_DEFINES = _DEBUG;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-fpermissive",
 				);
-				SDKROOT = macosx10.9;
+				SDKROOT = macosx10.12;
 				VALID_ARCHS = i386;
 			};
 			name = Debug;
@@ -1830,7 +1832,7 @@
 					"$(MAIN_CPP_DEFINES)",
 					MACOS_X,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-finline",
@@ -1842,7 +1844,7 @@
 					"-fomit-frame-pointer",
 					"-fno-common",
 				);
-				SDKROOT = macosx10.9;
+				SDKROOT = macosx10.12;
 				VALID_ARCHS = i386;
 			};
 			name = Release;

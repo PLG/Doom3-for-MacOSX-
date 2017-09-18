@@ -790,7 +790,7 @@
 					"-fpermissive",
 				);
 				PRODUCT_NAME = game;
-				SDKROOT = macosx10.9;
+				SDKROOT = macosx10.12;
 				ZERO_LINK = YES;
 			};
 			name = Debug;
@@ -827,7 +827,7 @@
 					"-fpermissive",
 				);
 				PRODUCT_NAME = game;
-				SDKROOT = macosx10.9;
+				SDKROOT = macosx10.12;
 				SYMROOT = build;
 				ZERO_LINK = NO;
 			};
@@ -845,7 +845,7 @@
 					MACOS_X,
 					GAME_DLL,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx10.9;
 				VALID_ARCHS = i386;
@@ -863,7 +863,7 @@
 					MACOS_X,
 					GAME_DLL,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_CFLAGS = (
 					"-finline",
 					"-finline-limit=1000",

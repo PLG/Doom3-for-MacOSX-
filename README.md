@@ -4,7 +4,7 @@ This is a fork of Kostas "Bad Sector" Michalopoulos's *"Doom3-for-MacOSX"*,<br/>
 which is a fork of Fabien Sanglard's *"Build Doom3 on MacOSX with XCode4"*.</br>
 http://fabiensanglard.net/doom3_macosx/index.php
 
-Set to build for MacOSX SDK 10.9.
+Set to build for MacOSX SDK 10.12.
 
 * Issue- OpenGL failure for full screen: kindly fixed by ```github/keegnotrub```
 * Issue- Heap Assertion FAILED: kindly fixed by ```github/MnM```
